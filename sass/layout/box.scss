@@ -1,0 +1,32 @@
+.main-box {
+  margin-top: 11.6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 10rem;
+  text-align: center;
+  .box {
+    img {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+    .box-content {
+      h3 {
+        @extend %poppinsMedium;
+        font-size: 2.4rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      p {
+        @extend %poppinsLite;
+        font-size: 1.6rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .main-box {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}

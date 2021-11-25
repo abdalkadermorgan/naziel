@@ -1,0 +1,12 @@
+@media (max-width: 767px) {
+  .header-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    .right-side {
+      margin-top: 2rem;
+    }
+  }
+  .header-nav .left-side .logo {
+    margin-right: 0;
+  }
+}

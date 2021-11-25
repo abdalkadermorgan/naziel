@@ -1,0 +1,41 @@
+.information {
+  padding-top: 9.3rem;
+  padding-bottom: 11.6rem;
+  background-color: #f6f3f2;
+  .slide-logo {
+    ul {
+      padding: 0;
+      li {
+        margin-right: 6.5rem;
+        margin-bottom: 1rem;
+      }
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 1661px) {
+      ul {
+        justify-content: center;
+      }
+      li {
+        margin-top: 1rem;
+      }
+    }
+  }
+  .sell {
+    margin-top: 16rem;
+    .container {
+      h2 {
+        max-width: 90rem;
+        text-align: center;
+        margin: auto;
+        font-size: 5.6rem;
+        @extend %poppinsSemiBold;
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+        line-height: 1.4;
+      }
+    }
+  }
+}

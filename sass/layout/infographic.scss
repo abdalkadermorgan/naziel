@@ -1,0 +1,138 @@
+.infographic {
+  padding-top: 9.3rem;
+  padding-bottom: 7rem;
+  background-color: #f6f3f2;
+  .container {
+    .row {
+      justify-content: space-between;
+      .col-lg-6 {
+        width: calc(50% - 7rem);
+      }
+      @media (max-width: 1201px) {
+        .col-lg-6 {
+          width: calc(50% - 3rem);
+        }
+      }
+      @media (max-width: 993px) {
+        .col-lg-6 {
+          width: auto;
+        }
+      }
+    }
+  }
+  .infographic-content {
+    @media (max-width: 993px) {
+      & {
+        text-align: center;
+      }
+    }
+    h2 {
+      display: inline-block;
+      overflow: hidden;
+      font-size: 5.6rem;
+      line-height: 1.4;
+      max-width: 70%;
+      padding-bottom: 2rem;
+    }
+    @media (max-width: 993px) {
+      h2 {
+        text-align: center;
+        margin-top: 1.5rem;
+        max-width: 100%;
+      }
+    }
+    p {
+      font-size: 2.1rem;
+      padding-bottom: 2rem;
+      color: #a19e9d;
+    }
+    ul {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        border-left: 1px solid #e2dcda;
+        padding-left: 3rem;
+        span {
+          @extend %poppinsSemiBold;
+          font-size: 3.1rem;
+          color: $mainColor;
+        }
+        p {
+          @extend %poppinsMedium;
+          color: $headColor;
+          font-size: 2.1rem;
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+      }
+      @media (max-width: 1401px) {
+        li {
+          padding-left: 2rem;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        li {
+          padding-left: 1rem;
+        }
+      }
+
+      @media (max-width: 992px) {
+        li {
+          padding-left: 0;
+          border: none;
+        }
+      }
+
+      li:first-child {
+        border: none;
+        padding-left: 0;
+      }
+    }
+
+    @media (max-width: 576px) {
+      ul {
+        justify-content: space-between;
+      }
+    }
+    .butn {
+      margin-top: 4rem;
+      display: inline-block;
+    }
+  }
+  .infographic-img {
+    position: relative;
+    z-index: 1;
+    img {
+      max-width: 100%;
+    }
+    @media (max-width: 993px) {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .infographic-img::before {
+    content: "";
+    background-image: url(../../images/bgImgR.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 3rem;
+    z-index: -1;
+  }
+  @media (max-width: 993px) {
+    .infographic-img {
+      margin-top: 3rem;
+    }
+    .infographic-img::before {
+      left: 0rem;
+    }
+  }
+}

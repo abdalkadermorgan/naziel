@@ -1,0 +1,62 @@
+.contact-us {
+  padding-top: 14.3rem;
+  padding-bottom: 5rem;
+
+  .contact-us-content {
+    background: rgb(84, 14, 60);
+    background: linear-gradient(
+      90deg,
+      rgba(84, 14, 60, 1) 10%,
+      rgba(170, 43, 68, 1) 98%
+    );
+    position: relative;
+    z-index: 1;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8rem 6rem;
+    flex-wrap: wrap;
+    .contact-us-info {
+      p:first-child {
+        @extend %poppinsMedium;
+        margin: 0;
+        padding: 0;
+        font-size: 2.1rem;
+        color: $secColor;
+      }
+      h2 {
+        @extend %poppinsSemiBold;
+        color: $whiteColor;
+      }
+      p:last-child {
+        color: $whiteColor;
+        margin-top: 2rem;
+      }
+    }
+    .go-contact {
+      .butn.trans {
+        margin-right: 3rem;
+      }
+    }
+    @media (max-width: 992px) {
+      .go-contact {
+        margin-top: 2rem;
+        display: block;
+      }
+    }
+  }
+  .contact-us-content::before {
+    content: "";
+    background-image: url(../../images/maskHeader.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}

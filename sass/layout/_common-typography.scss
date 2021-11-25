@@ -1,0 +1,113 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 10px = 1rem! */
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  @extend %poppinsRegular;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+// Fonts
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal&display=swap");
+
+%poppinsBold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+%poppinsSemiBold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+%poppinsMedium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+%poppinsRegular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+%poppinsLite {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+%tajawalRegular {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 400;
+}
+
+// Colors
+
+$mainColor: #aa2b44;
+$secColor: #f68b00;
+$orangecolor: #e3410e;
+$headColor: #362e2a;
+$blacColor: #000;
+$whiteColor: #fff;
+$grayColor: #a19e9d;
+
+h1 {
+  @extend %poppinsSemiBold;
+  font-size: 8rem;
+}
+
+h2 {
+  @extend %poppinsSemiBold;
+  font-size: 7.1rem;
+}
+
+h3 {
+  @extend %poppinsSemiBold;
+  font-size: 5.6rem;
+}
+
+p {
+  @extend %poppinsLite;
+  font-size: 2.1rem;
+}
+
+input {
+  &[type="text"],
+  &[type="password"],
+  &[type="email"] {
+    @extend %poppinsLite;
+    text-transform: none;
+    color: $whiteColor;
+  }
+}
+
+textarea,
+select {
+  @extend %poppinsLite;
+  text-transform: none;
+  color: $whiteColor;
+}
+
+input {
+  &[type="button"],
+  &[type="submit"] {
+    @extend %poppinsRegular;
+    text-transform: none;
+    color: $whiteColor;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+@media (min-width: 1778px) {
+  .container {
+    max-width: 1660px;
+  }
+}

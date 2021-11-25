@@ -1,0 +1,15 @@
+input[type="text"] {
+  background-color: transparent;
+  box-shadow: none;
+  border: 1px solid $whiteColor;
+  border-radius: 2.6rem;
+  padding: 1.4rem 2.5rem;
+  outline: none;
+  max-width: 100%;
+  width: 33rem;
+}
+
+input[type="text"]::placeholder {
+  color: $whiteColor;
+  @extend %poppinsLite;
+}

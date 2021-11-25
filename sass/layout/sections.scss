@@ -1,0 +1,317 @@
+// Platform
+
+header.main-header {
+  min-height: auto;
+  .header-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 100%;
+
+    align-items: start;
+    .header-nav {
+      grid-column: 1 /5;
+    }
+
+    .header-content {
+      margin-top: 0;
+      grid-column: 1 / 5;
+      grid-row: 2 /4;
+      .main {
+        .title-content {
+          text-align: center;
+          h1 {
+            max-width: 100%;
+            display: block;
+            padding: 0 2rem;
+            margin: 0;
+            span {
+              display: block;
+              color: $whiteColor;
+              width: fit-content;
+              margin: auto;
+            }
+            span::before {
+              content: "";
+              max-width: 100%;
+              height: 1rem;
+              background-image: url(../../images/underline.svg);
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              z-index: -1;
+              position: absolute;
+              top: 9.5rem;
+              left: 0;
+              transform: rotate(0deg);
+              display: inline-block;
+            }
+            @media (max-width: 1400px) {
+              span::before {
+                top: 7.5rem;
+              }
+            }
+            @media (max-width: 1200px) {
+              span::before {
+                top: 4.5rem;
+              }
+            }
+          }
+          h1::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header-grid {
+      display: block;
+    }
+  }
+}
+
+.platform-box {
+  padding-top: 5rem;
+  padding-bottom: 14rem;
+  .main-box {
+  }
+}
+
+.build-platform {
+  .build-info {
+    .build-img::before {
+      background-image: url(../../images/bgImgR.png);
+      top: -2rem;
+      right: 1rem;
+    }
+    .build-content {
+      ul {
+        li {
+          i {
+            color: $mainColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Services
+
+.share.talk {
+  .share-info {
+    h2 {
+      max-width: 95%;
+    }
+  }
+  .share-img::before {
+    background-image: url(../../images/bgImgOrange.png);
+  }
+}
+
+.share.easy.backround-gray {
+  background-color: #f6f3f2;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.share.easy {
+  .share-img::before {
+    left: -1rem;
+  }
+}
+
+// Pricing
+
+.best-plan {
+  margin-top: 9rem;
+  margin-bottom: 7rem;
+  h2 {
+    @extend %poppinsSemiBold;
+    text-align: center;
+    font-size: 5.6rem;
+    color: $headColor;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 3.6rem;
+    }
+  }
+  .save {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    margin-top: 7rem;
+    .count {
+      width: fit-content;
+      margin: auto;
+    }
+    p {
+      margin: 0;
+    }
+    .discount {
+      @extend %poppinsMedium;
+      width: 40rem;
+      background-color: #f6f3f2;
+      text-align: right;
+      padding: 1.5rem 2rem;
+      border-radius: 4rem;
+      font-size: 1.8rem;
+      label {
+        font-size: 1.4;
+        color: $mainColor;
+      }
+    }
+
+    .monthly {
+      @extend %poppinsMedium;
+      padding: 1.5rem 6rem;
+      border-radius: 4rem;
+      color: $whiteColor;
+      position: absolute;
+      top: 0;
+      background-color: $secColor;
+      font-size: 1.8rem;
+    }
+    @media (max-width: 576px) {
+      .discount {
+        width: 100%;
+        border-radius: 1rem;
+      }
+      .monthly {
+        position: static;
+        border-radius: 1rem;
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    .save {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.plan {
+  display: block;
+
+  .plan-sheet {
+    background-color: #f6f3f2;
+    padding: 6rem 4rem;
+    transition: 0.2s;
+    border-radius: 2rem;
+    margin-top: 4rem;
+    .plan-content {
+      text-align: center;
+    }
+    .our-plan {
+      @extend %poppinsMedium;
+      font-size: 1.8rem;
+      color: $secColor;
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .type {
+      font-size: 5.1rem;
+      @extend %poppinsBold;
+      color: $headColor;
+      display: block;
+      transition: 0.2s;
+      line-height: 1;
+    }
+    .price {
+      @extend %poppinsBold;
+      font-size: 7rem;
+      color: $secColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s;
+      label {
+        @extend %tajawalRegular;
+        font-size: 2.8rem;
+        margin: 0 2rem;
+      }
+      label:first-child {
+        margin-left: 0;
+      }
+      label:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .plan-desc {
+      margin-top: 5rem;
+      ul {
+        transition: 0.2s;
+        padding: 0;
+        li {
+          display: inline-block;
+          border-bottom: 1px solid #e2dcda;
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
+          margin: 0;
+          width: 100%;
+          transition: 0.2s;
+          i {
+            display: inline;
+            padding-right: 1.5rem;
+            color: $secColor;
+            font-size: 1.8rem;
+            transition: 0.2s;
+          }
+          p {
+            @extend %poppinsMedium;
+            display: inline-block;
+            font-size: 1.8rem;
+            margin: 0;
+            transition: 0.2s;
+          }
+        }
+        li:first-child {
+          padding-top: 0;
+        }
+        li:last-child {
+          border: none;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    .plan-sheet {
+      padding: 3rem 2rem;
+    }
+  }
+  .plan-sheet:hover {
+    transform: scaleY(1.1);
+    background-color: $mainColor;
+    .our-plan {
+      color: $whiteColor;
+    }
+    .type {
+      color: $whiteColor;
+    }
+    .price {
+      color: $whiteColor;
+    }
+    a.butn {
+      background-color: transparent;
+      border: 1px solid $whiteColor;
+    }
+    .plan-desc {
+      ul {
+        li {
+          border-color: $whiteColor;
+          p {
+            color: $whiteColor;
+          }
+        }
+      }
+    }
+  }
+}
